@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component} from 'react';
+//import logo from './logo.svg';
 import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import StrictMode from './StrictMode'
+import List from './components/list_items/List'
+
+
+
+
+
+
+class App extends Component{
+    
+  render(){
+     
+
+    return(
+      <div className='App'>
+     {/* //childeren props */}
+     {/* <RenderCount>
+     {(count,clickCount)=><CountTwo count={count} clickCount={clickCount}/>}
+     </RenderCount>
+    
+     <RenderCount>
+     {(count,clickCount)=><HoverCount count={count} clickCount={clickCount}/>}
+     </RenderCount> */}
+     {/* <RenderCount render={(count,clickCount)=><HoverCount count={count} clickCount={clickCount}/>} />
+     <RenderCount render={(count,clickCount)=><CountTwo count={count} clickCount={clickCount}/>} /> */}
+
+
+     {/* <DestructingProps name='sana sarwat' heroname='abc' />
+     <Greet name='sana sarwat' heroname='abc'/> */}
+
+      <React.StrictMode>
+          
+      <StrictMode />
+      </React.StrictMode>
+      <List />
+        
+      </div>  
+    );
+  }
+ 
 }
 
 export default App;
